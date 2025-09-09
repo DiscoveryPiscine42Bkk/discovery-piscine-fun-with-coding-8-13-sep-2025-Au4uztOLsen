@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Calculator</title>
+    <style>
+        *{ margin: 0; }
+        .container{ display: flex; justify-content: center; align-items: center; height: 100vh; }
+        input,button,select{ margin-top: 10px; height: 35px; }
+        button { width: 100px; }
+        select { width: 100px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <center>
+            <input type="text" id="text-1">
+            <br>
+            <select id="operator-select">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <br>
+            <input type="text" id="text-2">
+            <br>
+            <button type="submit" id="submit-btn">Try Me!</button>
+        </center>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('#submit-btn').on('click', function(){
+                const val1 = $('#text-1').val();
+                const val2 = $('#text-2').val();
+                const operator = $('#operator-select').val();
+                let result = 0;
+
+                if (val1 === '' || val2 === '' || isNaN(val1) || isNaN(val2) || val1 < 0 || val2 < 0) {
+                    alert("Error :(");
+                    return;
+                }
+
+                const num1 = Number(val1);
+                const num2 = Number(val2);
+
+                if ((operator === '/' || operator === '%') && num2 === 0) {
+                    alert("It’s over 9000!");
+                    console.log("It’s over 9000!");
+                    return;
+                }
+
+                if (operator === "+") result = num1 + num2;
+                else if (operator === "-") result = num1 - num2;
+                else if (operator === "*") result = num1 * num2;
+                else if (operator === "/") result = num1 / num2;
+                else if (operator === "%") result = num1 % num2;
+
+                alert(result);
+                console.log(result);
+            });
+
+            setInterval(function() {
+                alert("Please, use me...");
+            }, 30000);
+
+        });
+    </script>
+</body>
+</html>

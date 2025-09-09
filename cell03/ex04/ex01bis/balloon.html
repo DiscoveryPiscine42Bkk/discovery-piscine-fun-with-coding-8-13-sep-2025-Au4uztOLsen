@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Balloon</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .balloon{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="balloon" id="b-re"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            const balloon = $('#b-re');
+            const colors = ['red', 'green', 'blue'];
+            let colorIndex = 0;
+
+            balloon.on('click', function(){
+                let currentSize = balloon.width();
+
+                if (currentSize >= 420) {
+                    balloon.css({
+                        'width': '200px',
+                        'height': '200px',
+                        'background-color': 'red'
+                    });
+                    colorIndex = 0;
+                } else {
+                    let newSize = currentSize + 10;
+                    balloon.css({
+                        'width': newSize + 'px',
+                        'height': newSize + 'px'
+                    });
+
+                    colorIndex = (colorIndex + 1) % colors.length;
+                    balloon.css('background-color', colors[colorIndex]);
+                }
+            });
+
+            balloon.on('mouseleave', function(){
+                let currentSize = balloon.width();
+
+                if (currentSize > 200) {
+                    let newSize = currentSize - 5;
+                    balloon.css({
+                        'width': newSize + 'px',
+                        'height': newSize + 'px'
+                    });
+
+                    colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+                    balloon.css('background-color', colors[colorIndex]);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
