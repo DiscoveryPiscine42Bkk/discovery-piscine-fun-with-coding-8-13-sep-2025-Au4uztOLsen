@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+}
+button{
+    height: 50px;
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+button:hover{
+    color: white;
+    background-color: red;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
