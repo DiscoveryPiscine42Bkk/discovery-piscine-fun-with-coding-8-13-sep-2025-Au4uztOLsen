@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        input,button,select{
+            margin-top: 10px;
+            height: 35px;
+        }
+
+        button {
+            width: 100px;
+        }
+
+        select {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <center>
+            <input type="text" id="text-1">
+            <br>
+            <select id="sel-id">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <br>
+            <input type="text" id="text-2">
+            <br>
+            <button type="submit" onclick="calculate()">Try Me!</button>
+        </center>
+    </div>
+</body>
+<script>
+    const val1 = document.getElementById("text-1");
+    const val2 = document.getElementById("text-2");
+    const select_id = document.getElementById("sel-id");
+    let result = 0;
+
+    function calculate(){
+        let check = true;
+        if (val1.value >= 0 && val2.value >= 0 && (!isNaN(val1.value) && !isNaN(val2.value))){
+            if (select_id.value == "+"){
+                result = Number(val1.value)+Number(val2.value);
+            }
+            else if(select_id.value == "-"){
+                result = Number(val1.value)-Number(val2.value);
+            }
+            else if(select_id.value == "*"){
+                result = Number(val1.value)*Number(val2.value);
+            }
+            else if(select_id.value == "/"){
+                if (val2.value == 0){
+                    alert("It’s over 9000!");
+                    console.log("It’s over 9000!");
+                    check = false;
+                }
+                else{
+                    result = Number(val1.value)/Number(val2.value);
+                }
+            }
+            else if(select_id.value == "%"){
+                if (val2.value == 0){
+                    alert("It’s over 9000!");
+                    console.log("It’s over 9000!");
+                    check = false;
+                }
+                else{
+                    result = Number(val1.value)%Number(val2.value);
+                }
+            }
+            if (check){
+                alert(result);
+                console.log(result);
+            }
+        
+        }
+        else{
+            alert("Error :(")
+        }
+
+    }
+
+    setInterval(function() {
+        alert("Please, use me...");
+    }, 30000);
+</script>
+</html>
