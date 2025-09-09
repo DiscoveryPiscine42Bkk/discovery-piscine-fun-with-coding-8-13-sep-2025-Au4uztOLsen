@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .balloon{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="balloon"" id="b-re"></div>
+    </div>
+</body>
+<script>
+    const re = document.getElementById('b-re');
+    let num = 1;
+    re.addEventListener('click', resize);
+    re.addEventListener('mouseleave', shrink);
+
+    function resize(){
+        num += 1;
+        if (re.offsetWidth + 10 > 420){
+            re.style.width = '200px';
+            re.style.height = '200px';
+            re.style.backgroundColor = "red";
+            num = 1;
+        }
+        else{
+            re.style.width = (re.offsetWidth + 10) + 'px';
+            re.style.height = (re.offsetHeight + 10) + 'px';
+
+            if (num == 2){
+                re.style.backgroundColor = "green";
+            }
+            else if (num == 3){
+                re.style.backgroundColor = "blue";
+            }
+            else if (num > 3){
+                num = 1;
+                re.style.backgroundColor = "red";
+            }
+
+        }
+    }
+
+    function shrink(){
+        if (re.offsetWidth -5 > 200){
+            re.style.width = (re.offsetWidth - 5) + 'px';
+            re.style.height = (re.offsetHeight - 5) + 'px';
+            num -= 1;
+            if(num < 1){
+                num = 3;
+            }
+
+            if (num == 2){
+                re.style.backgroundColor = "green";
+            }
+            else if (num == 3){
+                re.style.backgroundColor = "blue";
+            }
+            else if (num == 1){
+                num = 1;
+                re.style.backgroundColor = "red";
+            }
+
+        }
+    }
+
+</script>
+</html>
