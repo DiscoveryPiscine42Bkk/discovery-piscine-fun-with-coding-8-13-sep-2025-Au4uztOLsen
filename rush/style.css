@@ -28,37 +28,60 @@ nav {
     gap: 30px;
 }
 
+h1{
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  opacity: 93%;
+}
+
 .about-con{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: #FFB347;
-    background: linear-gradient(135deg, #FFB347, #F4822E);
+    height: 110vh;
+    /*background: #FC7500;*/
+    /*background: linear-gradient(270deg, #FC7500, #F7DCB4);*/
 }
 
 .describe{
-    border: solid;
+    border: white solid;
+    border-width: thin;
     border-radius: 25px;
-    padding: 10px;
+    padding: 2vh;
     margin-top: 3%;
+    color: white;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 #header-txt{
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     color: white;
     font-size: 10vh;
 }
 
-#sec-txt,#name{
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);;
+#sec-txt{
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
     color: white;
     font-size: 4vh;
 }
 
+#name ,#user-d{
+    color: white;
+    padding-left: 2vh;
+}
+
 #job-txt{
-    color: black;
+    color: #FC7500;
 }
 
 .ex-con {
@@ -68,6 +91,7 @@ nav {
     align-items: center;
     background: #3510C7;
     background: linear-gradient(135deg, #3510C7, #92FCF9);
+    padding-bottom: 7%;
 }
 
 .first-ex{
@@ -75,6 +99,7 @@ nav {
     gap: 5vh;
     justify-content: center;
     align-items: center;
+    margin-top: 5%;
     padding: 0 5%; 
 }
 
@@ -83,11 +108,27 @@ nav {
     gap: 5vh;
     justify-content: center;
     align-items: center;
+    margin-top: 5%;
     padding: 0 5%; 
 }
 
 .sweet-text {
     max-width: 600px; 
+    color: white;
+}
+
+.es-text  {
+    max-width: 600px; 
+    color: white;
+}
+
+.ref-icon,.ref-icon1{
+    display: flex;
+    gap: 2vh;
+    align-items: center;
+}
+
+#git-i,#cir-user{
     color: white;
 }
 
@@ -104,8 +145,48 @@ nav {
 }
 
 .contact-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 50vh;
-    background-color: #f8f9fa; 
+    gap: 2vh;
+    background: #FC7500;
+    background: linear-gradient(270deg, #FC7500, #F7DCB4);
+}
+
+#con-con{
+    gap: 5vh;
+}
+
+.email-border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: white solid;
+    border-width: thin;
+    border-radius: 25px;
+    padding: 2vh;
+    color: white;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#icon-foot{
+    transition: transform 0.2s ease-in-out;
+}
+
+#icon-foot:hover {
+    transform: scale(1.3);
+}
+
+.describe:hover{
+    border: #3510C7 solid;
+    border-width: thin;
+}
+
+.pro-id:hover{
+    width: 55vh;
+    height: 55vh;
 }
 
 .pro-id {
@@ -115,4 +196,5 @@ nav {
     height: 50vh;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
     object-fit: cover;
+    transition: .35s ease-in-out;
 }

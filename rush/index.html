@@ -8,12 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="source/Typing Code Background video.mp4" type="video/mp4">
+    </video>
+
     <nav class="">
         <div class="logo-nav">
             <h1><b>AUGUST888</b></h1>
@@ -25,23 +29,24 @@
         </div>
     </nav>
     <div>
+
         <div class="about-con" id="acon">
-            <h1 id="header-txt">Hello World!</h1>
-            <h1 id="sec-txt">I'm a <span id="job-txt">Programmer!</span></h1>
-            <img src="profile.jpg" class="pro-id">
+            <h1 id="header-txt"><b>Hello World!</b></h1>
+            <h1 id="sec-txt">I'm a <span id="job-txt"><b>Programmer.</b></span></h1>
+            <img src="source/profile.JPG" class="pro-id">
             <div class="describe">
-                <h1>Username : <span id="name">Pacharanatthakorn Anan</span></h1>
+                <h1><i class="fa-solid fa-circle-user" id="cir-user"></i><b id="user-d">Username :</b> 67070106 Pacharanatthakorn Anan</h1>
             </div>
         </div>
 
         <div class="ex-con" id="econ">
             <div class="first-ex">
                 <div class="sweet-tomb">
-                    <img src="sweet.png" id="sweet">
+                    <img src="source/sweet.png" id="sweet">
                 </div>
 
                 <div class="sweet-text">
-                    <h1>Game Project: Sweet Tomb</h1>
+                    <h1><b>Game Project : Sweet Tomb</b></h1>
                     <br>
                     <p>โปรเจค Sweet Tomb นำเสนอการพัฒนาเกมสยองขวัญโดยใช้ภาษา Java เป็นเครื่องมือหลัก ในการพัฒนาเกมดังกล่าวได้รับแรงบันดาลใจจากเกมแนวสยองขวัญเอาชีวิตรอด (Survival Horror) ที่มุ่งเน้น ไปที่การสร้างบรรยากาศที่น่าตื่นเต้น
                     </p>
@@ -53,23 +58,40 @@
                         เป้าหมายของโครงงานนี้คือการสร้างเกมที่ไม่เพียงแต่มอบประสบการณ์ความระทึกขวัญ แต่ยังทำให้ผู้พัฒนา นำความรู้ที่ได้จากรายวิชา (Object-Oriented Programming) มาประยุกต์ใช้ และสามารถสร้างสรรค์ผลงานจากสิ่งที่ได้เรียนรู้ได้
                     </p>
                     <br>
-                    <a href="https://youtu.be/EmhMtjKM0Ws"><button type="button" class="btn btn-outline-light">Click    me!</button></a>
+                    <div class="ref-icon1">
+                        <a href="https://youtu.be/EmhMtjKM0Ws"><button type="button" class="btn btn-outline-light">Click me!</button></a>
+                        <a href="https://github.com/KhanunKup/OOP-PROJECT-Y1" id="git-i"><i class="fa fa-github" style="font-size:36px" id="git-icon"></i></a>
+                    </div>
                 </div>
             </div>
 
             <div class="sec-ex">
                 <div class="es-text">
-                    <p></p>
+                    <h1><b>Project : Easy Book</b></h1>
+                    <p>Easybook เป็น Web application สำหรับการจองห้องที่สามารถใข้งานได้จริงและมีประสิทธิภาพ ซึ่งสามารถนำมาทดแทนวิธีการจองห้องส่วนกลางของคณะเทคโนโลยีสารสนเทศในปัจจุบันได้</p>
+                    <div class="ref-icon">
+                        <a href="https://www.youtube.com/watch?v=a5J25RuYpYE"><button type="button" class="btn btn-outline-light">Click me!</button></a>
+                        <a href="https://github.com/KhanunKup/PSCP-PROJECT-Y1" id="git-i"><i class="fa fa-github" style="font-size:36px" id="git-icon"></i></a>
+                    </div>
                 </div>
 
-                <div class="sweet-tomb">
-                    <img src="easy.png" id="easy">
+                <div class="easy-book">
+                    <img src="source/easy.png" id="easy">
                 </div>
             </div>
         </div>
         <div class="contact-con" id="ccon">
-            
+            <h1 style="font-size:65px"><b>CONTACT ME</b></h1>
+            <div class="email-border">
+                <h1 style="font-size:30px">67070106@kmitl.ac.th</h1> 
+            </div>
+            <div class="con-con">
+                <a href="https://www.instagram.com/an4nsmiths/"><i class="fa fa-instagram" style="font-size:55px" id="icon-foot"></i></a>
+                <a href="https://github.com/Au4uztOLsen"><i class="fa-brands fa-github" style="font-size:55px" id="icon-foot"></i></a>
+                <a href="https://www.facebook.com/pacharanatthakorn.anan"><i class="fa-brands fa-facebook" style="font-size:55px" id="icon-foot"></i></a>
+                <a href="https://www.youtube.com/@newsenseverydays9416" id="icon-foot"><i class="fa-brands fa-youtube" style="font-size:55px" id="icon-foot"></i></a>
+            </div>
         </div>
     </div>
 </body>
-</html>
+</html> 
