@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    text-decoration: none;
+}
+
+body{
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+nav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.about-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #FFB347;
+    background: linear-gradient(135deg, #FFB347, #F4822E);
+}
+
+.describe{
+    border: solid;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 3%;
+}
+
+#header-txt{
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);;
+    color: white;
+    font-size: 10vh;
+}
+
+#sec-txt,#name{
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);;
+    color: white;
+    font-size: 4vh;
+}
+
+#job-txt{
+    color: black;
+}
+
+.ex-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #3510C7;
+    background: linear-gradient(135deg, #3510C7, #92FCF9);
+}
+
+.first-ex{
+    display: flex;
+    gap: 5vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%; 
+}
+
+.sec-ex{
+    display: flex;
+    gap: 5vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%; 
+}
+
+.sweet-text {
+    max-width: 600px; 
+    color: white;
+}
+
+#sweet{
+    border-radius: 25px;
+    height: 40vh;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#easy{
+    border-radius: 25px;
+    height: 40vh;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-con{
+    height: 50vh;
+    background-color: #f8f9fa; 
+}
+
+.pro-id {
+    margin-top: 3%;
+    border-radius: 50%;
+    width: 50vh;
+    height: 50vh;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+}
